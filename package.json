@@ -68,5 +68,19 @@
     "iOS >= 8",
     "Firefox >= 20",
     "Android > 4.4"
-  ]
+  ],
+   "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{vue,jsx,js,tsx,ts,json,css,md}": [
+      "prettier --write"
+    ],
+    "**/*.{vue,jsx,js,tsx,ts}": [
+      "eslint --fix"
+    ]
+  }
 }
