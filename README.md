@@ -40,7 +40,6 @@
 ├── .prettierignore.js                               // prettier ignore文件
 ├── .prettierrc.js                                   // prettier文件
 ├── postcss.config.js                                // postcss文件
-├── sonar-project.properties                         // sonar扫描文件
 ├── package.json                                     // 项目依赖和常用脚本命令配置
 ├── vue.config.js                                    // vue配置文件
 └── README.md                                        // 项目使用说明文件
