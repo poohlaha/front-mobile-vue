@@ -32,13 +32,14 @@
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "@bale-tools/mutate-service": "^2.2.4",
-    "@bale-tools/mutate-version": "^2.1.6",
+    "@bale-tools/mutate-service": "^2.2.7",
+    "@bale-tools/mutate-minimize": "^1.0.6",
+    "@bale-tools/mutate-version": "^2.1.9",
     "toml": "^3.0.0",
     "jscpd": "^3.4.5",
     "vconsole": "^3.9.5",
     "core-js": "^3.8.3",
-    "husky": "^4.2.3",
+    "husky": "^8.0.3",
     "prettier": "^2.4.1",
     "lint-staged": "^13.0.3",
     "babel-plugin-import": "^1.13.3",
@@ -69,7 +70,7 @@
     "Firefox >= 20",
     "Android > 4.4"
   ],
-   "husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
