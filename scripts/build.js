@@ -2,6 +2,7 @@ const { WebpackCompiler } = require('@bale-tools/mutate-service')
 const MutateVersion = require('@bale-tools/mutate-version')
 const path = require('path')
 const webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
 
 const resolve = dir => path.join(__dirname, '../', dir)
 const command = process.argv || []
@@ -29,6 +30,8 @@ function getWebpackPlugins() {
       })
   )
 
+  // 添加 vue-loader
+  plugins.push(new VueLoaderPlugin())
   return plugins
 }
 
@@ -40,6 +43,7 @@ function compiler() {
   WebpackCompiler({
     script: getScript(cmds),
     opts: {
+      languages: ['vue'],
       entry: './src/communal/app/index.js',
       plugins: getWebpackPlugins(),
       externals: {
